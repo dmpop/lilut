@@ -1,3 +1,9 @@
+<?php
+require_once('protect.php'); // Comment this line to remove password protection
+include 'inc/parsedown.php';
+$config = include('config.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <!-- Author: Dmitri Popov, dmpop@linux.com
