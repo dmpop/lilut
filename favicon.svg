@@ -15,16 +15,16 @@
    stroke-width="2"
    stroke-linecap="round"
    stroke-linejoin="round"
-   class="feather feather-target"
+   class="feather feather-sun"
    version="1.1"
-   id="svg8"
-   sodipodi:docname="favicon.svg"
+   id="svg20"
+   sodipodi:docname="sun.svg"
    inkscape:version="0.92.2 5c3e80d, 2017-08-06"
-   inkscape:export-filename="/home/dmpop/Downloads/favicon.png"
-   inkscape:export-xdpi="558.54547"
-   inkscape:export-ydpi="558.54547">
+   inkscape:export-filename="/home/dmpop/Downloads/sun.png"
+   inkscape:export-xdpi="512"
+   inkscape:export-ydpi="512">
   <metadata
-     id="metadata14">
+     id="metadata26">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -35,7 +35,7 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs12" />
+     id="defs24" />
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -45,33 +45,77 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1015"
-     id="namedview10"
+     inkscape:window-width="1366"
+     inkscape:window-height="703"
+     id="namedview22"
      showgrid="false"
      inkscape:zoom="9.8333333"
-     inkscape:cx="-4.779661"
+     inkscape:cx="9.9152542"
      inkscape:cy="12"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg8" />
+     inkscape:current-layer="svg20" />
   <circle
      cx="12"
      cy="12"
-     r="10"
+     r="5"
      id="circle2"
-     style="stroke:#c4c716;stroke-opacity:1" />
-  <circle
-     cx="12"
-     cy="12"
-     r="6"
-     id="circle4"
-     style="stroke:#9d81a3;stroke-opacity:1" />
-  <circle
-     cx="12"
-     cy="12"
-     r="2"
-     id="circle6"
-     style="stroke:#f69c1e;stroke-opacity:1" />
+     style="fill:#ffe392;fill-opacity:1;stroke:#ffb814;stroke-opacity:1" />
+  <line
+     x1="12"
+     y1="1"
+     x2="12"
+     y2="3"
+     id="line4"
+     style="fill:#ffe392;fill-opacity:1;stroke:#ffb814;stroke-opacity:1" />
+  <line
+     x1="12"
+     y1="21"
+     x2="12"
+     y2="23"
+     id="line6"
+     style="fill:#ffe392;fill-opacity:1;stroke:#ffb814;stroke-opacity:1" />
+  <line
+     x1="4.22"
+     y1="4.22"
+     x2="5.64"
+     y2="5.64"
+     id="line8"
+     style="fill:#ffe392;fill-opacity:1;stroke:#ffb814;stroke-opacity:1" />
+  <line
+     x1="18.36"
+     y1="18.36"
+     x2="19.78"
+     y2="19.78"
+     id="line10"
+     style="fill:#ffe392;fill-opacity:1;stroke:#ffb814;stroke-opacity:1" />
+  <line
+     x1="1"
+     y1="12"
+     x2="3"
+     y2="12"
+     id="line12"
+     style="fill:#ffe392;fill-opacity:1;stroke:#ffb814;stroke-opacity:1" />
+  <line
+     x1="21"
+     y1="12"
+     x2="23"
+     y2="12"
+     id="line14"
+     style="fill:#ffe392;fill-opacity:1;stroke:#ffb814;stroke-opacity:1" />
+  <line
+     x1="4.22"
+     y1="19.78"
+     x2="5.64"
+     y2="18.36"
+     id="line16"
+     style="fill:#ffe392;fill-opacity:1;stroke:#ffb814;stroke-opacity:1" />
+  <line
+     x1="18.36"
+     y1="5.64"
+     x2="19.78"
+     y2="4.22"
+     id="line18"
+     style="fill:#ffe392;fill-opacity:1;stroke:#ffb814;stroke-opacity:1" />
 </svg>
