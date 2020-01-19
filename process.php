@@ -63,7 +63,7 @@
 	//}
 	// Allow certain file formats
 	if($imageFileType != "jpg" && $imageFileType != "jpeg" && $imageFileType != "JPG" && $imageFileType != "JPEG" ) {
-	    echo "Only jpg, jpeg, JPG, and JPEG files are allowed.";
+	    echo "Only jpg, jpeg, JPG, and JPEG files are allowed. Make sure the file size doesn't exceed the current upload limit.";
 	    $uploadOk = 0;
 	}
 	// Check if $uploadOk is set to 0 by an error
