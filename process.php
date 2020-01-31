@@ -7,29 +7,8 @@
 	<meta charset="utf-8">
 	<title>Lilut</title>
 	<link rel="shortcut icon" href="favicon.png" />
-	<link rel="stylesheet" href="terminal.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-	 body {
-	     display: flex;
-	     flex-direction: column;
-	     max-width: 50rem;
-	     margin: 0 auto;
-	     padding: 0 0.9375rem;
-	     line-height: 1.9;
-         }
-	 h1,
-         h2,
-         h3,
-         h4 {
-             font-size: 1.5em;
-             margin-top: 2%;
-         }
-	 #center {
-             text-align: center;
-             margin: 0 auto;
-         }
-	</style>
     </head>
     <body>
 	<h1>Lilut</h1>
@@ -87,7 +66,7 @@
 	echo '<a download="results/'.$_FILES["fileToUpload"]["name"].'" href="results/'.$_FILES["fileToUpload"]["name"].'" title="Click to download the file"><img alt="Click to download the file" src="results/'.$_FILES["fileToUpload"]["name"].'"></a>';
 	?>
 	<form method="GET" action="index.php">
-	    <p style='margin-top:1em;'><button class="btn btn-primary" type="submit">Back</button></p>
+	    <p style='margin-top:1em;'><button type="submit">Back</button></p>
         </form>
     </body>
 </html>

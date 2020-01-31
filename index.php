@@ -7,34 +7,8 @@
 	<meta charset="utf-8">
 	<title>Lilut</title>
 	<link rel="shortcut icon" href="favicon.png" />
-	<link rel="stylesheet" href="terminal.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-	 body {
-	     display: flex;
-	     flex-direction: column;
-	     max-width: 50rem;
-	     margin: 0 auto;
-	     padding: 0 0.9375rem;
-	     line-height: 1.9;
-         }
-	 h1,
-         h2,
-         h3,
-         h4 {
-             font-size: 1.5em;
-             margin-top: 2%;
-         }
-	 label {
-	     display: inline-block;
-	     width:100px;
-	     text-align: right;
-	 }
-	 #center {
-             text-align: center;
-             margin: 0 auto;
-         }
-	</style>
     </head>
     <body>
 	<?php
@@ -51,7 +25,7 @@
 	<form action="process.php" method="post" enctype="multipart/form-data">
 	    <p class="label">Select JPEG file:</p>
 	    <input type="file" name="fileToUpload" id="fileToUpload"><p></p>
-	    <p class="label">Select LUT:</p>
+	    <p>Select LUT:</p>
 	    <select name="lut">
 		<?php
 		$files = glob("luts/*");
@@ -63,7 +37,7 @@
 		?>
 	    </select>
 	    <p></p>
-	    <input class="btn btn-primary" type="submit" value="Process" name="submit">
+	    <input type="submit" value="Process" name="submit">
 	</form>
 	
 	<p>
