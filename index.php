@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <!-- Author: Dmitri Popov, dmpop@linux.com
-	 License: GPLv3 https://www.gnu.org/licenses/gpl-3.0.txt -->
-    
+	 License: GPLv3 https://www.gnu.org/licenses/gpl-3.0.txt --> 
     <head>
 	<meta charset="utf-8">
 	<title>Lilut</title>
@@ -19,13 +18,11 @@
 	    mkdir('results', 0777, true);
 	}
 	?>
-
 	<h1>Lilut</h1>
-
 	<form action="process.php" method="post" enctype="multipart/form-data">
-	    <p class="label">Select JPEG file:</p>
+	    <p>Select JPEG file:</p>
 	    <input type="file" name="fileToUpload" id="fileToUpload"><p></p>
-	    <p>Select LUT:</p>
+	    <p>Select LUT: </p>
 	    <select name="lut">
 		<?php
 		$files = glob("luts/*");
