@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -7,115 +9,99 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="24"
-   height="24"
-   viewBox="0 0 24 24"
-   fill="none"
-   stroke="currentColor"
-   stroke-width="2"
-   stroke-linecap="round"
-   stroke-linejoin="round"
-   class="feather feather-sun"
+   width="511.99997"
+   height="442.39301"
+   viewBox="0 0 135.46665 117.04982"
    version="1.1"
-   id="svg20"
-   sodipodi:docname="favicon.svg"
+   id="svg8"
    inkscape:version="0.92.2 5c3e80d, 2017-08-06"
-   inkscape:export-filename="/home/dpopov/Documents/lilut/favicon.png"
-   inkscape:export-xdpi="512"
-   inkscape:export-ydpi="512">
+   sodipodi:docname="favicon.svg"
+   inkscape:export-filename="/home/dmpop/favicon.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="134.05242"
+     inkscape:cy="753.76794"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <metadata
-     id="metadata26">
+     id="metadata5">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <defs
-     id="defs24" />
-  <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1015"
-     id="namedview22"
-     showgrid="false"
-     inkscape:zoom="9.8333333"
-     inkscape:cx="-6.2542374"
-     inkscape:cy="12"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg20" />
-  <circle
-     cx="12"
-     cy="12"
-     r="5"
-     id="circle2"
-     style="fill:none;fill-opacity:1;stroke:#ffb814;stroke-opacity:1" />
-  <line
-     x1="12"
-     y1="1"
-     x2="12"
-     y2="3"
-     id="line4"
-     style="fill:#ffe392;fill-opacity:1;stroke:#ffb814;stroke-opacity:1" />
-  <line
-     x1="12"
-     y1="21"
-     x2="12"
-     y2="23"
-     id="line6"
-     style="fill:#ffe392;fill-opacity:1;stroke:#ffb814;stroke-opacity:1" />
-  <line
-     x1="4.22"
-     y1="4.22"
-     x2="5.64"
-     y2="5.64"
-     id="line8"
-     style="fill:#ffe392;fill-opacity:1;stroke:#ffb814;stroke-opacity:1" />
-  <line
-     x1="18.36"
-     y1="18.36"
-     x2="19.78"
-     y2="19.78"
-     id="line10"
-     style="fill:#ffe392;fill-opacity:1;stroke:#ffb814;stroke-opacity:1" />
-  <line
-     x1="1"
-     y1="12"
-     x2="3"
-     y2="12"
-     id="line12"
-     style="fill:#ffe392;fill-opacity:1;stroke:#ffb814;stroke-opacity:1" />
-  <line
-     x1="21"
-     y1="12"
-     x2="23"
-     y2="12"
-     id="line14"
-     style="fill:#ffe392;fill-opacity:1;stroke:#ffb814;stroke-opacity:1" />
-  <line
-     x1="4.22"
-     y1="19.78"
-     x2="5.64"
-     y2="18.36"
-     id="line16"
-     style="fill:#ffe392;fill-opacity:1;stroke:#ffb814;stroke-opacity:1" />
-  <line
-     x1="18.36"
-     y1="5.64"
-     x2="19.78"
-     y2="4.22"
-     id="line18"
-     style="fill:#ffe392;fill-opacity:1;stroke:#ffb814;stroke-opacity:1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-3.5603841e-6,-170.74174)">
+    <g
+       id="g984"
+       transform="translate(2.8522359e-6,-1.889879)">
+      <rect
+         ry="18.023687"
+         y="172.63162"
+         x="26.524845"
+         height="50.936493"
+         width="82.416977"
+         id="rect887"
+         style="fill:#c83737;fill-opacity:1;stroke:none;stroke-width:4.6626482;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         ry="12.74218"
+         y="190.40323"
+         x="7.0814821e-07"
+         height="99.278214"
+         width="135.46666"
+         id="rect815-3-3"
+         style="fill:#c83737;fill-opacity:1;stroke:none;stroke-width:2.39490771;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         transform="matrix(0.54665535,0,0,0.54665535,122.84994,113.24619)"
+         id="g877">
+        <circle
+           style="fill:#f8a102;fill-opacity:1;stroke:#ffffff;stroke-width:5.13556337;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path815"
+           cx="-100.82515"
+           cy="228.49179"
+           r="65.16555" />
+        <circle
+           style="fill:#d5f6ff;fill-opacity:1;stroke:none;stroke-width:3.0802238;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path815-7"
+           cx="-100.82515"
+           cy="228.49179"
+           r="39.085194" />
+      </g>
+      <circle
+         r="7.7589879"
+         cy="184.13629"
+         cx="88.900017"
+         id="path815-7-5"
+         style="fill:#d5f6ff;fill-opacity:1;stroke:none;stroke-width:0.61146992;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+  </g>
 </svg>

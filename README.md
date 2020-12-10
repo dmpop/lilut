@@ -14,7 +14,7 @@ Lilut is a ridiculously simple PHP-based web tool for applying ready-made Hald C
 2. Clone the project's repository using the `git clone https://gitlab.com/dmpop/lilut.git` command. Alternatively, download the latest source code using the appropriate button on the project's pages.
 3. Put Hald CLUT files into the _lilut/luts_ directory.
 
-To run Lilut locally, switch in the terminal to the _lilut_ directory and  run the `php -S 127.0.0.1:8000` command and point the browser to the _127.0.0.1:8000_ address.
+To run Lilut locally, switch in the terminal to the _lilut_ directory and  run the `php -S 0.0.0.0:8000` command and point the browser to the _127.0.0.1:8000_ address.
 
 To install Lilut on a web server with PHP, copy the _lilut_ directory to the document root of your server.
 
