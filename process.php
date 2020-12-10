@@ -22,9 +22,9 @@
 </head>
 
 <body>
-	<div class="uk-container uk-margin-small-top">
+	<div class="uk-container uk-margin-small-top uk-text-center">
 		<div class="uk-card uk-card-default uk-card-body">
-			<h1 class="uk-heading-line uk-text-center"><span>Lilut</span></h1>
+			<h1 class="uk-heading-line"><span>Lilut</span></h1>
 			<?php
 			$target_dir = "uploads/";
 			$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -32,7 +32,7 @@
 			$imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 			if (isset($_POST["submit"])) {
 				$lut = $_POST['lut'];
-				echo "<p class='uk-text-center'>Click on the image to download it.</p>";
+				echo "<p>Click on the image to download it.</p>";
 				$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
 				if ($check !== false) {
 					$uploadOk = 1;
