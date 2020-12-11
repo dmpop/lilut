@@ -23,12 +23,11 @@
 	<img style="display: inline; height: 1.6em;" src="favicon.svg" alt="logo" />
 	<h1 style="display: inline; height: 2em; margin-left: 0.3em; letter-spacing: 3px; color: rgb(200, 113, 55);">LILUT</h1>
 
-	<form action="process.php" method="post" enctype="multipart/form-data">
+	<form action="process.php" method="POST" enctype="multipart/form-data">
 		<p>Select JPEG file:</p>
-		<input type="file" name="fileToUpload" id="fileToUpload">
-		<p></p>
+		<input style="margin-bottom: 1.5em;" type="file" name="fileToUpload" id="fileToUpload">
 		<p>Select LUT:</p>
-		<select name="lut">
+		<select style="margin-bottom: 1.5em;" name="lut">
 			<?php
 			$files = glob("luts/*");
 			foreach ($files as $file) {
@@ -38,7 +37,8 @@
 			}
 			?>
 		</select>
-		<p></p>
+		<p>Password:</p>
+		<input style="margin-bottom: 1.5em;" type="password" name="password">
 		<input type="submit" value="Process" name="submit">
 	</form>
 	<hr style="margin-top: 1.5em;">
