@@ -13,6 +13,10 @@
 
 <body>
 	<?php
+	$max_upload = (int)(ini_get('upload_max_filesize'));
+	$max_post = (int)(ini_get('post_max_size'));
+	$memory_limit = (int)(ini_get('memory_limit'));
+	$upload_mb = min($max_upload, $max_post, $memory_limit);
 	if (!file_exists('uploads')) {
 		mkdir('uploads', 0777, true);
 	}
@@ -22,7 +26,7 @@
 	?>
 	<img style="display: inline; height: 1.6em;" src="favicon.svg" alt="logo" />
 	<h1 style="display: inline; height: 2em; margin-left: 0.3em; letter-spacing: 3px; color: rgb(200, 113, 55);">LILUT</h1>
-
+	<p style="color: lightgray;">Current upload limit is <u><?php echo $upload_mb; ?>MB</u></p>
 	<form action="process.php" method="POST" enctype="multipart/form-data">
 		<p>Select JPEG file:</p>
 		<input style="margin-bottom: 1.5em;" type="file" name="fileToUpload" id="fileToUpload">
