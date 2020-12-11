@@ -1,0 +1,10 @@
+  GNU nano 4.8                             /etc/systemd/system/pihole.service                                        
+[Unit]
+Description=Lilut Podman container
+Wants=syslog.service
+[Service]
+Restart=always
+ExecStart=/usr/bin/podman start -a lilut
+ExecStop=/usr/bin/podman stop -t 10 lilut
+[Install]
+WantedBy=multi-user.target
