@@ -16,7 +16,7 @@
 	<h1 style="display: inline; height: 2em; margin-left: 0.3em; letter-spacing: 3px; color: rgb(200, 113, 55);">LILUT</h1>
 	<?php
 	$PASSWORD='monkey';
-	if ($_POST['password']!=$PASSWORD) { print '<p>Wrong password :-(</p>'; exit(); }
+	if ($_POST['password']!=$PASSWORD) { print '<p>Wrong password :-(</p><p><a href="index.php">Back</a></p>'; exit(); }
 	$target_dir = "uploads/";
 	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 	$uploadOk = 1;

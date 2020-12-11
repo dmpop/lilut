@@ -62,6 +62,7 @@
 					</li>
 				</ol>
 				<p>Lilut stands for <strong style="color: brown;">Li</strong>ttle <strong style="color: brown;">LU</strong>T <strong style="color: brown;">T</strong>ool</p>
+				<p>This is <a href="https://gitlab.com/dmpop/lilut">Lilut</a>.</p>
 		</details>
 	</p>
 </body>
