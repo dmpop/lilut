@@ -7,7 +7,7 @@
 	<meta charset="utf-8">
 	<title>Lilut</title>
 	<link rel="shortcut icon" href="favicon.png" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
+	<link rel="stylesheet" href="water.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -21,7 +21,7 @@
 	}
 	?>
 	<img style="display: inline; height: 1.6em;" src="favicon.svg" alt="logo" />
-	<h1 style="display: inline; height: 2em; margin-left: 0.3em; letter-spacing: 3px;">LILUT</h1>
+	<h1 style="display: inline; height: 2em; margin-left: 0.3em; letter-spacing: 3px; color: rgb(200, 113, 55);">LILUT</h1>
 
 	<form action="process.php" method="post" enctype="multipart/form-data">
 		<p>Select JPEG file:</p>
@@ -41,10 +41,10 @@
 		<p></p>
 		<input type="submit" value="Process" name="submit">
 	</form>
-
+	<hr style="margin-top: 1.5em;">
 	<p>
 		<details>
-			<summary>Help</summary>
+			<summary style="color: rgb(200, 113, 55);">Help</summary>
 			<p>To learn how to create Hald-CLUT presets for use with Lilut, refer to the <a href="https://gumroad.com/l/linux-photography">Linux Photography</a> book.
 				<p>How to use Lilut</p>
 				<ol>
@@ -52,13 +52,13 @@
 						Before you start, place prepared Hald-CLUT files in the PNG format into the <i>luts</i> directory.
 					</li>
 					<li>
-						Select the desired JPEG file using the <b>Browse</b> button.
+						Select the desired JPEG file using the <kbd>Browse</kbd> button.
 					</li>
 					<li>
-						Select the desired Hald-CLUT preset from the <b>Select LUT</b> drop-down list.
+						Select the desired Hald-CLUT preset from the <em>Select LUT</em> drop-down list.
 					</li>
 					<li>
-						Press the <b>Process</b> button.
+						Press the <kbd>Process</kbd> button.
 					</li>
 				</ol>
 				<p>Lilut stands for <strong style="color: brown;">Li</strong>ttle <strong style="color: brown;">LU</strong>T <strong style="color: brown;">T</strong>ool</p>

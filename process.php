@@ -7,13 +7,13 @@
 	<meta charset="utf-8">
 	<title>Lilut</title>
 	<link rel="shortcut icon" href="favicon.png" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
+	<link rel="stylesheet" href="water.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
 	<img style="display: inline; height: 1.6em;" src="favicon.svg" alt="logo" />
-	<h1 style="display: inline; height: 2em; margin-left: 0.3em; letter-spacing: 3px;">LILUT</h1>
+	<h1 style="display: inline; height: 2em; margin-left: 0.3em; letter-spacing: 3px; color: rgb(200, 113, 55);">LILUT</h1>
 	<?php
 	$target_dir = "uploads/";
 	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
