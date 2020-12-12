@@ -15,8 +15,11 @@
 	<img style="display: inline; height: 1.6em;" src="favicon.svg" alt="logo" />
 	<h1 style="display: inline; height: 2em; margin-left: 0.3em; letter-spacing: 3px; color: rgb(200, 113, 55);">LILUT</h1>
 	<?php
-	$PASSWORD='monkey';
-	if ($_POST['password']!=$PASSWORD) { print '<p>Wrong password :-(</p><p><a href="index.php">Back</a></p>'; exit(); }
+	$PASSWORD = 'monkey';
+	if ($_POST['password'] != $PASSWORD) {
+		print '<p>Wrong password :-(</p><p><a href="index.php">Back</a></p>';
+		exit();
+	}
 	$target_dir = "uploads/";
 	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 	$uploadOk = 1;
@@ -65,8 +68,11 @@
 		}
 	}
 	?>
-	<form method="GET" action="index.php">
+	<form style="float: left; padding: 5px;" method="GET" action="index.php">
 		<p style='margin-top:1em;'><button type="submit">Back</button></p>
+	</form>
+	<form style="float: left; padding: 5px;" method="GET" action="delete.php">
+		<p style='margin-top:1em;'><button type="submit" name="delete">Delete</button></p>
 	</form>
 </body>
 
