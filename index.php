@@ -26,6 +26,14 @@
 	?>
 	<img style="display: inline; height: 1.6em;" src="favicon.svg" alt="logo" />
 	<h1 style="display: inline; height: 2em; margin-left: 0.3em; letter-spacing: 3px; color: rgb(200, 113, 55);">LILUT</h1>
+	<?php
+	if (!extension_loaded('imagick')) {
+		echo "<p>Looks like the php-imagick extension is missing.</p>";
+		echo "<p>On Debian and Ubuntu, use the <code>sudo apt install php-imagick</code> command.</p>";
+		echo "<p>On openSUSE, use the <code>sudo zypper install php-imagick</code> command.</p>";
+		exit;
+	}
+	?>
 	<p style="color: lightgray;">Current upload limit is <u><?php echo $upload_mb; ?>MB</u></p>
 	<form action="process.php" method="POST" enctype="multipart/form-data">
 		<p>Select JPEG file:</p>
