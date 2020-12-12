@@ -13,7 +13,7 @@ Lilut is a ridiculously simple PHP-based web tool for applying ready-made Hald C
 ## Installation and Usage
 
 1. Install the required packages on a local machine or remote web server.
-2. Clone the project's repository using the `git clone https://gitlab.com/dmpop/lilut.git` command. Alternatively, download the latest source code using the appropriate button on the project's pages.
+2. Clone the project's repository using the `git clone https://github.com/dmpop/lilut.git` command. Alternatively, download the latest source code using the appropriate button on the project's pages.
 3. Put Hald CLUT files into the _lilut/luts_ directory.
 4. Open the _process.php_ file and change the default password by editing the `$PASSWORD='monkey';` line.
 
@@ -29,11 +29,11 @@ The [Linux Photography](https://gumroad.com/l/linux-photography) book provides d
 
 ## Problems?
 
-Please report bugs and issues in the [Issues](https://gitlab.com/dmpop/lilut/issues) section.
+Please report bugs and issues in the [Issues](https://github.com/dmpop/lilut/issues) section.
 
 ## Contribute
 
-If you've found a bug or have a suggestion for improvement, open an issue in the [Issues](https://gitlab.com/dmpop/lilut/issues) section.
+If you've found a bug or have a suggestion for improvement, open an issue in the [Issues](https://github.com/dmpop/lilut/issues) section.
 
 To add a new feature or fix issues yourself, follow the following steps.
 
@@ -41,7 +41,7 @@ To add a new feature or fix issues yourself, follow the following steps.
 2. Create a feature branch using the `git checkout -b new-feature` command
 3. Add your new feature or fix bugs and run the `git commit -am 'Add a new feature'` command to commit changes
 4. Push changes using the `git push origin new-feature` command
-5. Submit a merge request
+5. Submit a pull request
 
 ## Author
 
