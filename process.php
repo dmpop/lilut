@@ -49,7 +49,7 @@
 	}
 	// Check if $uploadOk is set to 0 by an error
 	if ($uploadOk == 0) {
-		echo "The file was not uploaded.";
+		echo "<p>The file was not uploaded.</p>";
 		// if everything is ok, try to upload file
 	} else {
 		if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
@@ -61,7 +61,7 @@
 			echo "<p>Click on the image to download the file.</p>";
 			echo '<a download="results/' . $_FILES["fileToUpload"]["name"] . '" href="results/' . $_FILES["fileToUpload"]["name"] . '" title="Click to download the file"><img alt="Click to download the file" src="results/' . $_FILES["fileToUpload"]["name"] . '"></a>';
 		} else {
-			echo "Error uploading the file.";
+			echo "<p>Error uploading the file.</p>";
 		}
 	}
 	?>
