@@ -51,7 +51,10 @@
 		</select>
 		<p>Password:</p>
 		<input style="margin-bottom: 1.5em;" type="password" name="password">
-		<input type="submit" value="Process" name="submit">
+		<input style="float: left;" type="submit" value="Process" name="submit">
+	</form>
+	<form method="POST" action="view.php">
+		<p style="margin-top:1em;"><button type="submit">View</button></p>
 	</form>
 	<hr style="margin-top: 1.5em;">
 	<p>

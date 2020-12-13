@@ -71,9 +71,6 @@
 	<form style="float: left; padding: 5px;" method="GET" action="index.php">
 		<p style='margin-top:1em;'><button type="submit">Back</button></p>
 	</form>
-	<form style="float: left; padding: 5px;" method="GET" action="delete.php">
-		<p style='margin-top:1em;'><button type="submit" name="delete">Delete</button></p>
-	</form>
 </body>
 
 </html>
