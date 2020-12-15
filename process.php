@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <!-- Author: Dmitri Popov, dmpop@linux.com
@@ -19,15 +15,12 @@ session_start();
 	<img style="display: inline; height: 1.6em;" src="favicon.svg" alt="logo" />
 	<h1 style="display: inline; height: 2em; margin-left: 0.3em; letter-spacing: 3px; color: rgb(200, 113, 55);">LILUT</h1>
 	<?php
-	$SECRET = 'monkey';
-	$_SESSION['secret'] = $SECRET;
-	$_SESSION['password'] = $_POST['password'];
-	if ($_SESSION['password'] != $_SESSION['secret']) {
+	$PASSWORD = 'monkey';
+	if ($_POST['password'] != $PASSWORD) {
 		print '<p>Wrong password :-(</p><p><a href="index.php">Back</a></p>';
 		exit();
 	}
-	$target_dir = "uploads/";
-	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+	$target_file = "upload/" . basename($_FILES["fileToUpload"]["name"]);
 	$uploadOk = 1;
 	$imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 	// Check if image file is a actual image or fake image
@@ -58,25 +51,31 @@ session_start();
 	}
 	// Check if $uploadOk is set to 0 by an error
 	if ($uploadOk == 0) {
-		echo "<p>The file was not uploaded.</p>";
+		echo '<>The file was not uploaded.</p> <p><a href="index.php">Back</a></p>';
 		// if everything is ok, try to upload file
 	} else {
 		if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-			$imagick = new \Imagick('uploads/' . $_FILES["fileToUpload"]["name"]);
+			$imagick = new \Imagick('upload/' . $_FILES["fileToUpload"]["name"]);
 			$imagickPalette = new \Imagick(realpath("luts/$lut"));
 			$imagick->haldClutImage($imagickPalette);
-			$imagick->writeImage("results/" . basename($_FILES["fileToUpload"]["name"]));
-			unlink('uploads/' . $_FILES["fileToUpload"]["name"]);
+			$imagick->writeImage("result/" . basename($_FILES["fileToUpload"]["name"]));
+			unlink('upload/' . $_FILES["fileToUpload"]["name"]);
 			echo "<p>Click on the image to download the file.</p>";
-			echo '<a download="results/' . $_FILES["fileToUpload"]["name"] . '" href="results/' . $_FILES["fileToUpload"]["name"] . '" title="Click to download the file"><img alt="Click to download the file" src="results/' . $_FILES["fileToUpload"]["name"] . '"></a>';
+			echo '<a download="result/' . $_FILES["fileToUpload"]["name"] . '" href="result/' . $_FILES["fileToUpload"]["name"] . '" title="Click to download the file"><img alt="Click to download the file" src="result/' . $_FILES["fileToUpload"]["name"] . '"></a>';
+			$file = "result/" . basename($_FILES["fileToUpload"]["name"]);
+			ob_start();
+			while (ob_get_status()) {
+				ob_end_clean();
+			}
+			header('Content-type: image/jpeg');
+			header('Content-Disposition: attachment; filename="' . $file . '"');
+			readfile($file);
+			unlink($file);
 		} else {
-			echo "<p>Error uploading the file.</p>";
+			echo '<p>Error uploading the file.</p> <p><a href="index.php">Back</a></p>';
 		}
 	}
 	?>
-	<form style="float: left; padding: 5px;" method="GET" action="index.php">
-		<p style='margin-top:1em;'><button type="submit">Back</button></p>
-	</form>
 </body>
 
 </html>
