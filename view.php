@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <!-- Author: Dmitri Popov, dmpop@linux.com
@@ -15,7 +18,6 @@
     <img style="display: inline; height: 1.6em;" src="favicon.svg" alt="logo" />
     <h1 style="display: inline; height: 2em; margin-left: 0.3em; letter-spacing: 3px; color: rgb(200, 113, 55);">LILUT</h1>
     <?php
-    $PASSWORD = 'monkey';
     $fileList = glob('results/*');
     //Loop through the array that glob returned.
     foreach ($fileList as $filename) {
@@ -25,14 +27,12 @@
     ?>
     <p></p>
     <form style="float: left; padding: 5px;" method="POST" action=" ">
-        <p>Password:</p>
-        <input style="margin-bottom: 1.5em;" type="password" name="secret">
         <p style='float: left;'><button type="submit" name="delete">Delete</button>
             <button type="submit" name="back">Back</button></p>
     </form>
 
     <?php
-    if (isset($_POST["delete"]) and $_POST['secret'] = $PASSWORD) {
+    if (isset($_POST["delete"]) and $_SESSION['password'] = $_SESSION['secret']) {
         $files = glob('results/*'); // get all file names
         foreach ($files as $file) { // iterate files
             if (is_file($file)) {
