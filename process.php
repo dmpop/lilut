@@ -34,16 +34,6 @@
 			$uploadOk = 0;
 		}
 	}
-	// Check if file already exists
-	//if (file_exists($target_file)) {
-	//   echo "Sorry, file already exists.";
-	//    $uploadOk = 0;
-	//}
-	// Check file size
-	//if ($_FILES["fileToUpload"]["size"] > 500000) {
-	//    echo "Sorry, your file is too large.";
-	//    $uploadOk = 0;
-	//}
 	// Allow certain file formats
 	if ($imageFileType != "jpg" && $imageFileType != "jpeg" && $imageFileType != "JPG" && $imageFileType != "JPEG") {
 		echo "<p>Only jpg, jpeg, JPG, and JPEG files are allowed. Also, make sure the file size doesn't exceed the current upload limit.</p>";
@@ -60,8 +50,6 @@
 			$imagick->haldClutImage($imagickPalette);
 			$imagick->writeImage("result/" . basename($_FILES["fileToUpload"]["name"]));
 			unlink('upload/' . $_FILES["fileToUpload"]["name"]);
-			echo "<p>Click on the image to download the file.</p>";
-			echo '<a download="result/' . $_FILES["fileToUpload"]["name"] . '" href="result/' . $_FILES["fileToUpload"]["name"] . '" title="Click to download the file"><img alt="Click to download the file" src="result/' . $_FILES["fileToUpload"]["name"] . '"></a>';
 			$file = "result/" . basename($_FILES["fileToUpload"]["name"]);
 			ob_start();
 			while (ob_get_status()) {
