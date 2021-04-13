@@ -35,7 +35,7 @@ include('config.php');
 			if ($check !== false) {
 				$uploadOk = 1;
 			} else {
-				echo "<p>File is not an image.</p>";
+				echo "<p>Something went wrong. :-(</p>";
 				$uploadOk = 0;
 			}
 		}
