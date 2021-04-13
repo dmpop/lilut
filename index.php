@@ -29,7 +29,7 @@ include('config.php');
 	}
 	?>
 	<div style="text-align: center;">
-		<img style="display: inline; height: 2em; vertical-align: middle;" src="favicon.png" alt="logo" />
+		<img style="display: inline; height: 2em; vertical-align: middle;" src="favicon.svg" alt="logo" />
 		<h1 class="text-center" style="display: inline; margin-left: 0.19em; vertical-align: middle; letter-spacing: 3px; margin-top: 0em; color: #f6a159ff;">LILUT</h1>
 		<p style="color: lightgray;">Current upload limit is <u><?php echo $upload_mb; ?>MB</u></p>
 	</div>
