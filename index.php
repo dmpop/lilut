@@ -31,7 +31,7 @@ include('config.php');
 	<div style="text-align: center;">
 		<img style="display: inline; height: 2em; vertical-align: middle;" src="favicon.svg" alt="logo" />
 		<h1 class="text-center" style="display: inline; margin-left: 0.19em; vertical-align: middle; letter-spacing: 3px; margin-top: 0em; color: #f6a159ff;">LILUT</h1>
-		<p style="color: lightgray;">Current upload limit is <u><?php echo $upload_mb; ?>MB</u></p>
+		<p style="color: lightgray; margin-bottom: 1.5em;">Current upload limit is <u><?php echo $upload_mb; ?>MB</u></p>
 	</div>
 	<?php
 	if (!extension_loaded('imagick')) {
@@ -42,7 +42,7 @@ include('config.php');
 	}
 	?>
 	<div class="card">
-		<form action="process.php" method="POST" enctype="multipart/form-data">
+		<form style="margin-top: 1.5em;" action="process.php" method="POST" enctype="multipart/form-data">
 			<label for="fileToUpload">Select JPEG file:</label>
 			<input style="margin-bottom: 1.5em; margin-top: 0.5em;" type="file" name="fileToUpload" id="fileToUpload">
 			<label for="lut">Select LUT:</label><br />
@@ -58,7 +58,7 @@ include('config.php');
 			</select>
 			<br />
 			<label for="password">Password:</label><br />
-			<input style="margin-top: 0.5em;" type="password" name="password">
+			<input style="margin-top: 0.5em; width: 15em;" type="password" name="password">
 			<div class="text-center">
 				<button style="margin-bottom: 1.5em;" type="submit" name="submit">Process</button>
 			</div>
