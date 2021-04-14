@@ -54,7 +54,6 @@ include('config.php');
 				$imagickPalette = new \Imagick(realpath("luts/$lut"));
 				$imagick->haldClutImage($imagickPalette);
 				$imagick->writeImage("result/" . basename($_FILES["fileToUpload"]["name"]));
-				unlink('upload/' . $_FILES["fileToUpload"]["name"]);
 				$file = "result/" . basename($_FILES["fileToUpload"]["name"]);
 				ob_start();
 				while (ob_get_status()) {
@@ -62,8 +61,11 @@ include('config.php');
 				}
 				header('Content-type: image/jpeg');
 				header('Content-Disposition: attachment; filename="' . $file . '"');
-				readfile($file);
-				unlink($file);
+				if (!$keep) {
+					unlink('upload/' . $_FILES["fileToUpload"]["name"]);
+					readfile($file);
+					unlink($file);
+				}
 			} else {
 				echo '<p>Error uploading the file.</p>';
 			}
