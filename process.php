@@ -31,6 +31,7 @@ include('config.php');
 		// Check if image file is a actual image or fake image
 		if (isset($_POST["submit"])) {
 			$lut = $_POST['lut'];
+			$lutname = strtolower(str_replace(" ", "-", basename($lut, ".png")));
 			$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
 			if ($check !== false) {
 				$uploadOk = 1;
@@ -53,8 +54,8 @@ include('config.php');
 				$imagick = new \Imagick('upload/' . $_FILES["fileToUpload"]["name"]);
 				$imagickPalette = new \Imagick(realpath("luts/$lut"));
 				$imagick->haldClutImage($imagickPalette);
-				$imagick->writeImage("result/" . basename($_FILES["fileToUpload"]["name"]));
-				$file = "result/" . basename($_FILES["fileToUpload"]["name"]);
+				$imagick->writeImage("result/" . $lutname . "_" . basename($_FILES["fileToUpload"]["name"]));
+				$file = "result/" . $lutname . "_"  . basename($_FILES["fileToUpload"]["name"]);
 				ob_start();
 				while (ob_get_status()) {
 					ob_end_clean();
