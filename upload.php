@@ -12,35 +12,25 @@ include('config.php');
 	<link rel="shortcut icon" href="favicon.png" />
 	<link rel="stylesheet" href="classless.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-		h1 {
-			letter-spacing: 3px;
-			color: #99ccff;
-		}
-
-		img {
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
-			margin-top: 1%;
-			margin-bottom: 1%;
-		}
-	</style>
 </head>
 
 <body>
 	<div style="text-align: center;">
 		<img style="display: inline; height: 2em; vertical-align: middle;" src="favicon.svg" alt="logo" />
 		<h1 class="text-center" style="margin-left: 0.19em; vertical-align: middle; letter-spacing: 3px; margin-top: 0em; color: #f6a159ff;">LILUT</h1>
-		<button style="margin-bottom: 2em; margin-top: 2em;" onclick='window.location.href = "index.php"'>Back</button>
 		<?php
+
+		if (!$upload) {
+			echo '<p style="margin-top: 2em; margin-bottom: 2em;"><h3 style="margin-top: 0em;">⚠️ Upload is disabled.</h3></p>';
+			echo '<button style="margin-bottom: 2em;" onclick=\'window.location.href = "index.php"\'>Back</button>';
+			exit();
+		}
+
 		$upload_dir = "luts/";
 		if (isset($_POST['submit'])) {
 			if ($_POST['password'] != $pw) {
-				echo '<div class="card text-center">';
-				echo '<p>Wrong password :-(</p>';
+				echo '<p style="margin-top: 2em; margin-bottom: 2em;"><h3 style="margin-top: 0em;">😞 Wrong password!</h3></p>';
 				echo '<button style="margin-bottom: 2em;" onclick=\'window.location.href = "upload.php"\'>Try again</button>';
-				echo '</div>';
 				exit();
 			}
 			$countfiles = count($_FILES['file']['name']);
@@ -53,7 +43,7 @@ include('config.php');
 			echo '</script>';
 		}
 		?>
-		<div class="card text-center">
+		<div class="card text-center" style="margin-top: 2em;">
 			<form style="margin-top: 1em;" method='post' action='' enctype='multipart/form-data'>
 				<label for="file[]">Select Hald CLUT file(s):</label><br />
 				<input style="margin-bottom: 1.5em; margin-top: 0.5em;" type="file" name="file[]" id="file" multiple>

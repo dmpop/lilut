@@ -21,7 +21,7 @@ include('config.php');
 		<h1 class="text-center" style="display: inline; margin-left: 0.19em; vertical-align: middle; letter-spacing: 3px; margin-top: 0em; color: #f6a159ff;">LILUT</h1>
 		<?php
 		if ($_POST['password'] != $pw) {
-			print '<p>Wrong password :-(</p>';
+			echo '<p style="margin-top: 2em; margin-bottom: 2em;"><h3 style="margin-top: 0em;">😞 Wrong password!</h3></p>';
 			echo '<button style="margin-bottom: 2em;" onclick=\'window.location.href = "index.php"\'>Back</button>';
 			exit();
 		}
@@ -36,18 +36,18 @@ include('config.php');
 			if ($check !== false) {
 				$uploadOk = 1;
 			} else {
-				echo "<p>Something went wrong. :-(</p>";
+				echo '<p style="margin-top: 2em; margin-bottom: 2em;"><h3 style="margin-top: 0em;">😟 Something went wrong!</h3></p>';
 				$uploadOk = 0;
 			}
 		}
 		// Allow certain file formats
 		if ($imageFileType != "jpg" && $imageFileType != "jpeg" && $imageFileType != "JPG" && $imageFileType != "JPEG") {
-			echo "<p>Only jpg, jpeg, JPG, and JPEG files are allowed. Also, make sure the file size doesn't exceed the current upload limit.</p>";
+			echo '<p style="margin-top: 2em; margin-bottom: 2em;"><h3 style="margin-top: 0em;">😐 Only jpg, jpeg, JPG, and JPEG files are allowed. Also, make sure the file size does not exceed the current upload limit.</h3></p>';
 			$uploadOk = 0;
 		}
 		// Check if $uploadOk is set to 0 by an error
 		if ($uploadOk == 0) {
-			echo '<>The file was not uploaded.</p>';
+			echo '<p style="margin-top: 2em; margin-bottom: 2em;"><h3 style="margin-top: 0em;">😟 The file was not uploaded.</h3></p>';
 			// if everything is ok, try to upload file
 		} else {
 			if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
@@ -68,7 +68,7 @@ include('config.php');
 					unlink($file);
 				}
 			} else {
-				echo '<p>Error uploading the file.</p>';
+				echo '<p style="margin-top: 2em; margin-bottom: 2em;"><h3 style="margin-top: 0em;">😟 Error uploading the file.</h3></p>';
 			}
 		}
 		?>
