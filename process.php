@@ -54,15 +54,17 @@ include('config.php');
 				$imagick = new \Imagick('upload/' . $_FILES["fileToUpload"]["name"]);
 				$imagickPalette = new \Imagick(realpath("luts/$lut"));
 				$imagick->haldClutImage($imagickPalette);
-				$imagick->writeImage("result/" . $lutname . "_" . basename($_FILES["fileToUpload"]["name"]));
-				$file = "result/" . $lutname . "_"  . basename($_FILES["fileToUpload"]["name"]);
+				$imagick->writeImage($lutname . "_" . basename($_FILES["fileToUpload"]["name"]));
+				$file = $lutname . "_"  . basename($_FILES["fileToUpload"]["name"]);
 				ob_start();
 				while (ob_get_status()) {
 					ob_end_clean();
 				}
 				header('Content-type: image/jpeg');
 				header('Content-Disposition: attachment; filename="' . $file . '"');
-				if (!$keep) {
+				if ($keep) {
+					copy($file, "result/" . $file);
+				} else {
 					unlink('upload/' . $_FILES["fileToUpload"]["name"]);
 					readfile($file);
 					unlink($file);
