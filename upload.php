@@ -29,7 +29,7 @@ include('config.php');
 		$upload_dir = "luts/";
 		if (isset($_POST['submit'])) {
 			if ($_POST['password'] != $pw) {
-				echo '<p style="margin-top: 2em; margin-bottom: 2em;"><h3 style="margin-top: 0em;">😞 Wrong password!</h3></p>';
+				echo '<p style="margin-top: 2em; margin-bottom: 2em;"><h3 style="margin-top: 0em;">Wrong password!</h3></p>';
 				echo '<button style="margin-bottom: 2em;" onclick=\'window.location.href = "upload.php"\'>Try again</button>';
 				exit();
 			}
