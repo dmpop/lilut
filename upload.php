@@ -20,12 +20,17 @@ if ($protect) {
 <body>
 	<div style="text-align: center;">
 		<img style="display: inline; height: 2em; vertical-align: middle;" src="favicon.svg" alt="logo" />
-		<h1 class="text-center" style="margin-left: 0.19em; vertical-align: middle; letter-spacing: 3px; margin-top: 0em; color: #f6a159ff;">LILUT</h1>
+		<h1 class="text-center" style="display: inline; margin-left: 0.19em; vertical-align: middle; letter-spacing: 3px; margin-top: 0em; color: #f6a159ff;">LILUT</h1>
 		<?php
+		if (!$upload) {
+			echo '<p style="margin-top: 2em; margin-bottom: 2em;"><h3 style="margin-top: 0em;">⚠️ Upload is disabled.</h3></p>';
+			echo '<button style="margin-top: 2em;" onclick=\'window.location.href = "index.php"\'>Back</button>';
+			exit();
+		}
 		$upload_dir = "luts/";
 		if (isset($_POST['submit'])) {
-			$countfiles = count($_FILES['file']['name']);
-			for ($i = 0; $i < $countfiles; $i++) {
+			$count_files = count($_FILES['file']['name']);
+			for ($i = 0; $i < $count_files; $i++) {
 				$filename = $_FILES['file']['name'][$i];
 				move_uploaded_file($_FILES['file']['tmp_name'][$i], $upload_dir . DIRECTORY_SEPARATOR . $filename);
 			}

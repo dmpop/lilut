@@ -53,9 +53,9 @@ if ($protect) {
 				<?php
 				$files = glob("luts/*");
 				foreach ($files as $file) {
-					$filename = basename($file);
+					$file_name = basename($file);
 					$name = basename($file, ".png");
-					echo "<option value='$filename'>$name</option>";
+					echo "<option value='$file_name'>$name</option>";
 				}
 				?>
 			</select>
