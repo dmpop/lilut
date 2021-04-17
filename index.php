@@ -1,5 +1,8 @@
 <?php
 include('config.php');
+if ($protect) {
+	require_once('protect.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -57,8 +60,6 @@ include('config.php');
 				?>
 			</select>
 			<br />
-			<label for="password">Password:</label><br />
-			<input style="margin-top: 0.5em;" type="password" name="password">
 			<div class="text-center">
 				<button style="margin-bottom: 1.5em;" type="submit" name="submit">Process</button>
 			</div>

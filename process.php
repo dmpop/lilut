@@ -1,5 +1,8 @@
 <?php
 include('config.php');
+if ($protect) {
+	require_once('protect.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -19,12 +22,8 @@ include('config.php');
 	<div style="text-align: center;">
 		<img style="display: inline; height: 2em; vertical-align: middle;" src="favicon.svg" alt="logo" />
 		<h1 class="text-center" style="display: inline; margin-left: 0.19em; vertical-align: middle; letter-spacing: 3px; margin-top: 0em; color: #f6a159ff;">LILUT</h1>
+		<button style="margin-bottom: 2em;" onclick='window.location.href = "index.php"'>Back</button>
 		<?php
-		if ($_POST['password'] != $pw) {
-			echo '<p style="margin-top: 2em; margin-bottom: 2em;"><h3 style="margin-top: 0em;">Wrong password</h3></p>';
-			echo '<button style="margin-bottom: 2em;" onclick=\'window.location.href = "index.php"\'>Back</button>';
-			exit();
-		}
 		$target_file = "upload/" . basename($_FILES["fileToUpload"]["name"]);
 		$uploadOk = 1;
 		$imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));

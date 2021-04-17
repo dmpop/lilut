@@ -1,5 +1,8 @@
 <?php
 include('config.php');
+if ($protect) {
+	require_once('protect.php');
+}
 ?>
 
 <html lang="en" data-theme="<?php echo $theme ?>">
@@ -19,20 +22,8 @@ include('config.php');
 		<img style="display: inline; height: 2em; vertical-align: middle;" src="favicon.svg" alt="logo" />
 		<h1 class="text-center" style="margin-left: 0.19em; vertical-align: middle; letter-spacing: 3px; margin-top: 0em; color: #f6a159ff;">LILUT</h1>
 		<?php
-
-		if (!$upload) {
-			echo '<p style="margin-top: 2em; margin-bottom: 2em;"><h3 style="margin-top: 0em;">⚠️ Upload is disabled.</h3></p>';
-			echo '<button style="margin-bottom: 2em;" onclick=\'window.location.href = "index.php"\'>Back</button>';
-			exit();
-		}
-
 		$upload_dir = "luts/";
 		if (isset($_POST['submit'])) {
-			if ($_POST['password'] != $pw) {
-				echo '<p style="margin-top: 2em; margin-bottom: 2em;"><h3 style="margin-top: 0em;">Wrong password!</h3></p>';
-				echo '<button style="margin-bottom: 2em;" onclick=\'window.location.href = "upload.php"\'>Try again</button>';
-				exit();
-			}
 			$countfiles = count($_FILES['file']['name']);
 			for ($i = 0; $i < $countfiles; $i++) {
 				$filename = $_FILES['file']['name'][$i];
@@ -44,15 +35,16 @@ include('config.php');
 		}
 		?>
 		<div class="card text-center" style="margin-top: 2em;">
-			<form style="margin-top: 1em;" method='post' action='' enctype='multipart/form-data'>
+			<form id="lut" style="margin-top: 1em;" method='POST' action='' enctype='multipart/form-data'>
 				<label for="file[]">Select Hald CLUT file(s):</label><br />
 				<input style="margin-bottom: 1.5em; margin-top: 0.5em;" type="file" name="file[]" id="file" multiple>
-				<label for="password">Password:</label><br />
-				<input style="margin-top: 0.5em;" type="password" name="password">
-				<button role="button" name="submit">Upload</button>
 			</form>
+			<span style="display: inline;">
+				<button role="button" name="submit" form="lut">Upload</button>
+				<button style="margin-bottom: 2em;" onclick='window.location.href = "index.php"'>Back</button>
 		</div>
-		<p class="text-center"><?php echo $footer ?></p>
+	</div>
+	<p class="text-center"><?php echo $footer ?></p>
 	</div>
 </body>
 
