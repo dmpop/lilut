@@ -22,7 +22,6 @@ if ($protect) {
 	<div style="text-align: center;">
 		<img style="display: inline; height: 2em; vertical-align: middle;" src="favicon.svg" alt="logo" />
 		<h1 class="text-center" style="display: inline; margin-left: 0.19em; vertical-align: middle; letter-spacing: 3px; margin-top: 0em; color: #f6a159ff;">LILUT</h1>
-		<button style="margin-bottom: 2em;" onclick='window.location.href = "index.php"'>Back</button>
 		<?php
 		$target_file = "upload/" . basename($_FILES["fileToUpload"]["name"]);
 		$upload_ok = 1;
@@ -35,7 +34,6 @@ if ($protect) {
 			if ($check !== false) {
 				$upload_ok = 1;
 			} else {
-				echo '<p style="margin-top: 2em; margin-bottom: 2em;"><h3 style="margin-top: 0em;">Something went wrong</h3></p>';
 				$upload_ok = 0;
 			}
 		}
@@ -46,7 +44,7 @@ if ($protect) {
 		}
 		// Check if $upload_ok is set to 0 by an error
 		if ($upload_ok == 0) {
-			echo '<p style="margin-top: 2em; margin-bottom: 2em;"><h3 style="margin-top: 0em;">The file was not uploaded.</h3></p>';
+			echo '<p style="margin-top: 2em; margin-bottom: 2em;"><h3 style="margin-top: 0em;"> Something went wrong. The file was not uploaded.</h3></p>';
 			// if everything is ok, try to upload file
 		} else {
 			if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
