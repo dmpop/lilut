@@ -64,27 +64,26 @@ if ($protect) {
 				<button style="margin-bottom: 1.5em;" type="submit" name="submit">Process</button>
 			</div>
 		</form>
-	</div>
-	<div class="card" style="margin-top: 2em;">
-		<h2 class="text-center" style="margin-top: 0em;">Help</h2>
-		<hr>
-		<p>To learn how to create Hald CLUT presets for use with Lilut, refer to the <a href="https://gumroad.com/l/linux-photography">Linux Photography</a> book.
-		<p>How to use Lilut</p>
-		<ol>
-			<li>
-				Before you start, place prepared Hald CLUT files in the PNG format into the <i>luts</i> directory.
-			</li>
-			<li>
-				Select the desired JPEG file using the <kbd>Browse</kbd> button.
-			</li>
-			<li>
-				Select the desired Hald CLUT preset from the <em>Select LUT</em> drop-down list.
-			</li>
-			<li>
-				Press the <kbd>Process</kbd> button.
-			</li>
-		</ol>
-		<p class="text-center">Lilut stands for <strong style="color: #f6a159ff;">Li</strong>ttle <strong style="color: #f6a159ff;">LU</strong>T <strong style="color: #f6a159ff;">T</strong>ool</p>
+		<details>
+			<summary style="letter-spacing: 1px; color: #f6a159ff;">Help</summary>
+			<p>To learn how to create Hald CLUT presets for use with Lilut, refer to the <a href="https://gumroad.com/l/linux-photography">Linux Photography</a> book.
+			<p>How to use Lilut</p>
+			<ol>
+				<li>
+					Before you start, place prepared Hald CLUT files in the PNG format into the <i>luts</i> directory.
+				</li>
+				<li>
+					Select the desired JPEG file using the <kbd>Browse</kbd> button.
+				</li>
+				<li>
+					Select the desired Hald CLUT preset from the <em>Select LUT</em> drop-down list.
+				</li>
+				<li>
+					Press the <kbd>Process</kbd> button.
+				</li>
+			</ol>
+			<p class="text-center">Lilut stands for <strong style="color: #f6a159ff;">Li</strong>ttle <strong style="color: #f6a159ff;">LU</strong>T <strong style="color: #f6a159ff;">T</strong>ool</p>
+		</details>
 	</div>
 	<p class="text-center"><?php echo $footer ?></p>
 </body>

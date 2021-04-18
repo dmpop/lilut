@@ -2,7 +2,7 @@
 
 Lilut is a ridiculously simple PHP-based web tool for applying ready-made Hald CLUT presets to JPEG files.
 
-<img src="lilut.png" alt="Lilut">
+<img src="lilut.png" alt="Lilut" width="400"/>
 
 ## Dependencies
 
@@ -12,10 +12,10 @@ Lilut is a ridiculously simple PHP-based web tool for applying ready-made Hald C
 
 ## Installation and Usage
 
-1. Install the required packages on a local machine or remote web server.
+1. Install the required packages on a local machine or a remote web server.
 2. Clone the project's repository using the `git clone https://github.com/dmpop/lilut.git` command. Alternatively, download the latest source code using the appropriate button on the project's pages.
 3. Put Hald CLUT files into the _lilut/luts_ directory.
-4. Open the _process.php_ file and change the default password by editing the `$PASSWORD='monkey';` line.
+4. Open the _config.php_ file and configure the desired options.
 
 To run Lilut locally, switch in the terminal to the _lilut_ directory and  run the `php -S 0.0.0.0:8000` command and point the browser to the _127.0.0.1:8000_ address.
 
