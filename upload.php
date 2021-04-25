@@ -47,6 +47,7 @@ if ($protect) {
 			<span style="display: inline;">
 				<button role="button" name="submit" form="lut">Upload</button>
 				<button style="margin-bottom: 2em;" onclick='window.location.href = "index.php"'>Back</button>
+			</span>
 		</div>
 	</div>
 	<p class="text-center"><?php echo $footer ?></p>

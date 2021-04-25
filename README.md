@@ -2,7 +2,7 @@
 
 Lilut is a ridiculously simple PHP-based web tool for applying ready-made Hald CLUT presets to JPEG files.
 
-<img src="lilut.png" alt="Lilut" width="400"/>
+<img src="lilut.png" alt="Lilut"/>
 
 ## Dependencies
 

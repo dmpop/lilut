@@ -36,19 +36,19 @@ if ($protect) {
 		<h1 class="text-center" style="display: inline; margin-left: 0.19em; vertical-align: middle; letter-spacing: 3px; margin-top: 0em; color: #f6a159ff;">LILUT</h1>
 		<p style="color: lightgray; margin-bottom: 1.5em;">💡 Current upload limit is <u><?php echo $upload_mb; ?>MB</u></p>
 	</div>
-	<?php
-	if (!extension_loaded('imagick')) {
-		echo "<p>Looks like the php-imagick extension is missing.</p>";
-		echo "<p>On Debian and Ubuntu, use the <code>sudo apt install php-imagick</code> command.</p>";
-		echo "<p>On openSUSE, use the <code>sudo zypper install php-imagick</code> command.</p>";
-		exit;
-	}
-	?>
-	<div class="card text-center">
+	<div class="card">
+		<?php
+		if (!extension_loaded('imagick')) {
+			echo "<p>Looks like the php-imagick extension is missing.</p>";
+			echo "<p>On Debian and Ubuntu, use the <code>sudo apt install php-imagick</code> command.</p>";
+			echo "<p>On openSUSE, use the <code>sudo zypper install php-imagick</code> command.</p>";
+			exit;
+		}
+		?>
 		<form style="margin-top: 1em;" action="process.php" method="POST" enctype="multipart/form-data">
 			<label for="fileToUpload">Select JPEG file:</label>
 			<input style="margin-bottom: 1.5em; margin-top: 0.5em;" type="file" name="fileToUpload" id="fileToUpload">
-			<label for="lut">Select LUT:</label><br />
+			<label for="lut">Select LUT:</label>
 			<select style="margin-bottom: 1.5em; margin-top: 0.5em;" name="lut">
 				<?php
 				$files = glob("luts/*");
@@ -59,15 +59,12 @@ if ($protect) {
 				}
 				?>
 			</select>
-			<br />
-			<div class="text-center">
-				<button style="margin-bottom: 1.5em;" type="submit" name="submit">Process</button>
-			</div>
+			<button style="margin-bottom: 1.5em;" type="submit" name="submit">Process</button> <a style="color: #009999;" href="https://gumroad.com/l/hald-clut-pack">I want these Hald CLUT files</a>
 		</form>
 		<details>
 			<summary style="letter-spacing: 1px; color: #f6a159ff;">Help</summary>
-			<p>To learn how to create Hald CLUT presets for use with Lilut, refer to the <a href="https://gumroad.com/l/linux-photography">Linux Photography</a> book.
-			<p>How to use Lilut</p>
+			<p>Create your own Hald CLUT files or buy the <a style="color: #009999;" href="https://gumroad.com/l/hald-clut-pack">the Hald CLUT Pack</a>.
+			<h4>How to use Lilut</h4>
 			<ol>
 				<li>
 					Before you start, place prepared Hald CLUT files in the PNG format into the <i>luts</i> directory.
