@@ -1,8 +1,5 @@
 <?php
 include('config.php');
-if ($protect) {
-	require_once('protect.php');
-}
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +11,8 @@ if ($protect) {
 	<meta charset="utf-8">
 	<title>Lilut</title>
 	<link rel="shortcut icon" href="favicon.png" />
-	<link rel="stylesheet" href="classless.css">
+	<link rel="stylesheet" href="css/classless.css">
+	<link rel="stylesheet" href="css/themes.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -105,6 +103,7 @@ if ($protect) {
 				}
 				?>
 			</select>
+
 			<button style="margin-bottom: 1.5em;" type="submit" name="submit">Process</button> <a style="color: #009999;" href="https://gumroad.com/l/hald-clut-pack">I want these Hald CLUT files</a>
 		</form>
 		<details>
