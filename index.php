@@ -42,58 +42,14 @@ include('config.php');
 			echo "<p>On openSUSE, use the <code>sudo zypper install php-imagick</code> command.</p>";
 			exit;
 		}
-		if (isset($_POST["submit"])) {
-			$target_file = "upload/" . basename($_FILES["fileToUpload"]["name"]);
-			$upload_ok = 1;
-			$image_file_type = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-			$lut = $_POST['lut'];
-			$lut_name = strtolower(str_replace(" ", "-", basename($lut, ".png")));
-			$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-			if ($check !== false) {
-				$upload_ok = 1;
-			} else {
-				$upload_ok = 0;
-			}
-			if ($image_file_type != "jpg" && $image_file_type != "jpeg" && $image_file_type != "JPG" && $image_file_type != "JPEG") {
-				$upload_ok = 0;
-			}
-			if ($upload_ok == 0) {
-				echo "<script>";
-				echo 'alert("Something went wrong. Make sure you upload a JPEG file that does not exceed the upload limit.")';
-				echo "</script>";
-			} else {
-				if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-					$imagick = new \Imagick('upload/' . $_FILES["fileToUpload"]["name"]);
-					$imagick_palette = new \Imagick(realpath("luts/$lut"));
-					$imagick->haldClutImage($imagick_palette);
-					$imagick->writeImage($lut_name . "_" . basename($_FILES["fileToUpload"]["name"]));
-					$file = $lut_name . "_"  . basename($_FILES["fileToUpload"]["name"]);
-					ob_start();
-					while (ob_get_status()) {
-						ob_end_clean();
-					}
-					header('Content-type: image/jpeg');
-					header('Content-Disposition: attachment; filename="' . $file . '"');
-					readfile($file);
-					if ($keep) {
-						rename($file, "result/" . $file);
-					} else {
-						unlink('upload/' . $_FILES["fileToUpload"]["name"]);
-						unlink($file);
-					}
-				} else {
-					echo "<script>";
-					echo 'alert("Error uploading the file.")';
-					echo "</script>";
-				}
-			}
-		}
 		?>
+
 		<form style="margin-top: 1em;" action=" " method="POST" enctype="multipart/form-data">
 			<label for="fileToUpload">Select JPEG file:</label>
 			<input style="margin-bottom: 1.5em; margin-top: 0.5em;" type="file" name="fileToUpload" id="fileToUpload">
 			<label for="lut">Select LUT:</label>
 			<select style="margin-bottom: 1.5em; margin-top: 0.5em;" name="lut">
+
 				<?php
 				$files = glob("luts/*");
 				foreach ($files as $file) {
@@ -104,7 +60,8 @@ include('config.php');
 				?>
 			</select>
 
-			<button style="margin-bottom: 1.5em;" type="submit" name="submit">Process</button> <a style="color: #009999;" href="https://gumroad.com/l/hald-clut-pack">I want these Hald CLUT files</a>
+			<button style="margin-bottom: 1.5em;" type="submit" name="submit">Process</button> <input type="checkbox" name="keep" value="ok"> Keep processed file
+			<div style="margin-bottom: 1.5em; margin-top: .5em;"><a style="color: #009999;" href="https://gumroad.com/l/hald-clut-pack">I want these Hald CLUT files</a></div>
 		</form>
 		<details>
 			<summary style="letter-spacing: 1px; color: #f6a159ff;">Help</summary>
@@ -128,6 +85,56 @@ include('config.php');
 		</details>
 	</div>
 	<p class="text-center"><?php echo $footer ?></p>
+
+	<?php
+	if (isset($_POST["submit"])) {
+		$target_file = "upload/" . basename($_FILES["fileToUpload"]["name"]);
+		$upload_ok = 1;
+		$image_file_type = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+		$lut = $_POST['lut'];
+		$lut_name = strtolower(str_replace(" ", "-", basename($lut, ".png")));
+		$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+		if ($check !== false) {
+			$upload_ok = 1;
+		} else {
+			$upload_ok = 0;
+		}
+		if ($image_file_type != "jpg" && $image_file_type != "jpeg" && $image_file_type != "JPG" && $image_file_type != "JPEG") {
+			$upload_ok = 0;
+		}
+		if ($upload_ok == 0) {
+			echo "<script>";
+			echo 'alert("Something went wrong. Make sure you upload a JPEG file that does not exceed the upload limit.")';
+			echo "</script>";
+		} else {
+			if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+				$imagick = new \Imagick('upload/' . $_FILES["fileToUpload"]["name"]);
+				$imagick_palette = new \Imagick(realpath("luts/$lut"));
+				$imagick->haldClutImage($imagick_palette);
+				$imagick->writeImage($lut_name . "_" . basename($_FILES["fileToUpload"]["name"]));
+				$file = $lut_name . "_"  . basename($_FILES["fileToUpload"]["name"]);
+				ob_start();
+				while (ob_get_status()) {
+					ob_end_clean();
+				}
+				header('Content-type: image/jpeg');
+				header('Content-Disposition: attachment; filename="' . $file . '"');
+				readfile($file);
+				if ($_POST['keep'] == 'ok') {
+					rename($file, "result/" . $file);
+				} else {
+					unlink('upload/' . $_FILES["fileToUpload"]["name"]);
+					unlink($file);
+				}
+			} else {
+				echo "<script>";
+				echo 'alert("Error uploading the file.")';
+				echo "</script>";
+			}
+		}
+	}
+	?>
+
 </body>
 
 </html>
