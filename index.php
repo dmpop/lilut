@@ -16,7 +16,7 @@ $footer = "This is <a href='https://github.com/dmpop/lilut'>Lilut</a>. I really 
 	<title>Lilut</title>
 	<link rel="shortcut icon" href="favicon.png" />
 	<link rel="stylesheet" href="css/lit.css">
-	<link rel="stylesheet" href="css/utils.css">
+	<link rel="stylesheet" href="css/styles.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -42,7 +42,7 @@ $footer = "This is <a href='https://github.com/dmpop/lilut'>Lilut</a>. I really 
 		<div class="card">
 			<?php
 			if (!extension_loaded('imagick')) {
-				echo "<p>Looks like the php-imagick extension is missing.</p>";
+				echo "<div style='font-size: 1.2em; color: red;'><p>Looks like the php-imagick extension is missing</p></div>";
 				echo "<p>On Debian and Ubuntu, use the <code>sudo apt install php-imagick</code> command.</p>";
 				echo "<p>On openSUSE, use the <code>sudo zypper install php-imagick</code> command.</p>";
 				exit;
