@@ -21,9 +21,9 @@ To run Lilut locally, switch in the terminal to the _lilut_ directory and  run t
 
 To install Lilut on a web server with PHP, copy the _lilut_ directory to the document root of your server.
 
-<img src="https://tokyoma.de/bookcovers/linux-photography.jpg" title="Linux Photography book" width="200"/>
+The [Linux Photography](https://gumroad.com/l/linux-photography) book provides additional information  on creating Hald CLUT presets for use with Lilut. Get your copy at [Google Play Store](https://play.google.com/store/books/details/Dmitri_Popov_Linux_Photography?id=cO70CwAAQBAJ) or [Gumroad](https://gumroad.com/l/linux-photography).
 
-The [Linux Photography](https://gumroad.com/l/linux-photography) book provides detailed information  on creating Hald CLUT presets for use with Lilut. Get your copy at [Google Play Store](https://play.google.com/store/books/details/Dmitri_Popov_Linux_Photography?id=cO70CwAAQBAJ) or [Gumroad](https://gumroad.com/l/linux-photography).
+<img src="https://cameracode.coffee/uploads/linux-photography.png" title="Linux Photography" width="300"/>
 
 ## Problems?
 
